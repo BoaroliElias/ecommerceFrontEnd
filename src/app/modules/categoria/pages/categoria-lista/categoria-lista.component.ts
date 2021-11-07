@@ -39,3 +39,5 @@ categorias = {} as IPageConfig<ICategoria> | undefined;
     this.routeService.navigate(`/categoria/cadastrar`)
   }
 }
+
+//testee
