@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { CategoriaService } from '../../service/categororia.service';
+import { ICategoria } from '../../model/categoria.model';
+import { CategoriaService } from '../../service/categoria.service';
 // import { ICategoria } from importar categoria 
 
 @Component({
@@ -11,9 +12,9 @@ import { CategoriaService } from '../../service/categororia.service';
 export class CategoriaVisualizarComponent implements OnInit {
 
   constructor(private categoriaService: CategoriaService,
-    private activatedRoute: ActivatedRoute,) { }
-  
+    private activatedRoute: ActivatedRoute) { }
   categoria = {} as ICategoria;
+
   // dessa forma ca fazer categoria. vem as atributos da interface
 
   ngOnInit(): void {

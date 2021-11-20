@@ -4,11 +4,11 @@ import { NavigationExtras, Router } from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
-export class RoutesService {
+export class RouteService {
 
   constructor(private router: Router) { }
 
-  public navigate(rota: String, extras?: NavigationExtras) {
+  public navigate(rota: string, extras?: NavigationExtras) {
     this.router.navigate([rota], extras);
   }
 }

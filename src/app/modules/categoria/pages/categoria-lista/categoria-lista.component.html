@@ -1,5 +1,5 @@
 <div class="col-md-12">
-    <button (click)="cadastrarNovaCategoria" class="btn btn-success"> Nova Categoria </button>
+    <button (click)="cadastrarNovaCategoria()" class="btn btn-success"> Nova Categoria </button>
 </div>
 <div class="col-md-12" *ngFor="let categoria of categorias.conteudo"> 
     <div class="col-md-3"> 
@@ -10,7 +10,7 @@
     </div>
     <div class="col-md-3">
         <button (click)="visualizar(categoria)" >Visualizar</button>
+        <button (click)="atualizar(categoria)">Atualizar</button>
     </div>
 </div>
-
 
