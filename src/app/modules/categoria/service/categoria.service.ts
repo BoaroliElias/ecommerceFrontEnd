@@ -7,6 +7,8 @@ import { IPageConfig } from 'src/app/commons/models/pagination.model';import { I
 })
 export class CategoriaService {
 
+  constructor(private httpCLient: HttpClient) { }
+
   salvarCategoria(categoria: ICadastroAtualizacaoCategoria) : Promise<ICategoria> {
     return this.httpCLient
     .post<ICategoria>(`http://localhost:8080/categoria/`, categoria)
@@ -19,7 +21,6 @@ export class CategoriaService {
     .toPromise();
   }
 
-  constructor(private httpCLient: HttpClient) { }
   
 // retornar uma função http, fazendo uma requisição 
   getAll():Promise<IPageConfig<ICategoria>>{

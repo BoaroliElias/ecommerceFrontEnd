@@ -7,6 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'meu-primeiro-projeto';
-  textoPadrao = 'Testando meu teste padrao';
+  textoPadrao = 'Testando padrao';
+  textoPrincipal = '';
  
+  setTextoPrincipal(texto: string){
+    this.textoPrincipal = texto;
+  }
 }

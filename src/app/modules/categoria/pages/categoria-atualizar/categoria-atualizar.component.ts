@@ -20,13 +20,14 @@ export class CategoriaAtualizarComponent implements OnInit {
 
   ngOnInit(): void {
     this.getOne(this.activatedRoute.snapshot.params.idCategoria);
+    this.error.message = '';
   }
 
 
   getOne(id: number) {
     this.categoriaService.getOne(id)
     .then(result => {
-      console.log(result);
+      // console.log(result);
       this.categoria = result;
     })
   }
@@ -42,12 +43,11 @@ export class CategoriaAtualizarComponent implements OnInit {
     });
   }
 
-  disabled() {
-    return !this.categoria.descricao || this.categoria.descricao.length > 30;
-  }
-
   limpaErro() {
     this.error.message = '';
   }
 
+  // disabled() {
+  //   return !this.categoria.descricao || this.categoria.descricao.length > 30;
+  // }
 }

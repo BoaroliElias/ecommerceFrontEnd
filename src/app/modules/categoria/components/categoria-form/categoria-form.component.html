@@ -6,9 +6,8 @@
     type="text" 
     [(ngModel)] = "categoria.descricao">
 </div>
-
 <div class="col-md-12">
-    <button class="btn btn-success" (click)="salvar()" [disable] = "disable">
+    <button class="btn btn-success" (click)="salvar()" [disabled] = "disabled()">
         Salvar
     </button>
 </div>

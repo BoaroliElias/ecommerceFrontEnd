@@ -19,7 +19,7 @@ export class CategoriaCadastrarComponent implements OnInit {
     this.error.message = '';
   }
 
-  salvar($event: ICategoria){
+  salvar($event: ICadastroAtualizacaoCategoria) {
     this.categoriaService.salvarCategoria($event)
     .then(() => {
       this.routeService.navigate('/categoria/lista');

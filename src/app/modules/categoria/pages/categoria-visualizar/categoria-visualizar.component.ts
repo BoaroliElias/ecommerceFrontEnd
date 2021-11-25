@@ -13,6 +13,7 @@ export class CategoriaVisualizarComponent implements OnInit {
 
   constructor(private categoriaService: CategoriaService,
     private activatedRoute: ActivatedRoute) { }
+  
   categoria = {} as ICategoria;
 
   // dessa forma ca fazer categoria. vem as atributos da interface

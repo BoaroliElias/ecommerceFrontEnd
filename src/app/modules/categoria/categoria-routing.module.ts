@@ -20,8 +20,9 @@ const routes: Routes = [
         children: [
             { path: '', redirectTo: '/categoria/Lista', pathMatch: 'full' },
             { path: 'lista', component: CategoriaListaComponent },
+            { path: 'cadastrar', component: CategoriaCadastrarComponent},
             { path: 'visualizar/:idCategoria', component: CategoriaVisualizarComponent},
-            { path: 'cadastrar', component: CategoriaCadastrarComponent}
+            { path: 'atualizar/:idCategoria', component: CategoriaCadastrarComponent}
         ]
     }
 ];

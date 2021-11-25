@@ -17,7 +17,7 @@ export class CategoriaFormComponent implements OnInit {
   private salvaCategoriaEventPublisher = new EventEmitter<ICategoria>();
 
   ngOnInit(): void {
-    console.log(this.categoria);
+    // console.log(this.categoria);
   }
 
   //irá emitir o evento do estado novo da categoria
@@ -25,7 +25,7 @@ export class CategoriaFormComponent implements OnInit {
     this.salvaCategoriaEventPublisher.emit(this.categoria);
   }
 
-  disable(){
+  disabled(){
     return !this.categoria.descricao || this.categoria.descricao.length > 30;
   }
 
